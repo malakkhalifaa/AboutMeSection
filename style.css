@@ -1,69 +1,63 @@
+/* ========== BASE STYLES ========== */
 body {
   font-family: "Inter", sans-serif;
   color: #fff;
   margin: 0;
   background: linear-gradient(0deg, #080808, #1f1e28);
   min-height: 100vh;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-x: hidden;
 }
 
 .content {
   position: relative;
-  z-index: 1; /* Ensure content is above particles */
+  z-index: 1;
   max-width: 1200px;
   margin: auto;
   padding: 16px 48px;
 }
 
-.header {
-  padding: 10px 0px;
-  text-align: right;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 30px;
-}
-
 section {
-  padding: 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
+/* ========== TYPOGRAPHY ========== */
 h1 {
   font-size: 3em;
-  padding: 0;
   margin: 0;
   font-weight: 700;
-  color: #f3ec78; /* Light yellow color for the title */
+  color: #f3ec78;
 }
 
 h2 {
   font-size: 2.5em;
-  margin-top: 40px;
+  margin: 0 0 20px;
   font-weight: 700;
-  text-align: center;
-  color: #ff6600; /* Solid color for the subheader */
-  margin-bottom: 20px;
+  color: #ff6600;
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
+/* ========== ABOUT ME ========== */
 .about-content p {
   font-size: 1em;
   font-weight: 300;
   color: #d3d3d3;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   text-align: justify;
 }
 
+/* ========== CONTACT ICONS ========== */
 .contact-links {
   margin-top: 20px;
 }
@@ -102,6 +96,7 @@ h2 {
   box-shadow: 0 10px 20px rgba(255, 102, 0, 0.5);
 }
 
+/* ========== HERO SECTION ========== */
 .hero {
   padding-top: 60px;
   display: flex;
@@ -111,8 +106,7 @@ h2 {
 
 #avatar-container {
   height: 500px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 32px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,4 +114,112 @@ h2 {
 
 #avatar-loading {
   font-size: 3em;
+}
+
+/* ========== EXPERIENCE SECTION ========== */
+#experience {
+  background: linear-gradient(180deg, #1f1e28, #0f0f17);
+  color: #f5f5f5;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  color: #ffc800;
+  margin-bottom: 40px;
+}
+
+/* Container */
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 10px;
+}
+
+/* Card Styling */
+.exp-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 5px solid #95e214;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease;
+  backdrop-filter: blur(6px);
+}
+
+.exp-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #e6cf00;
+}
+
+.exp-card h3 span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.exp-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* Bullet List */
+.exp-card ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #dcdcdc;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Hover effect */
+.exp-card:hover {
+  border-left-color: #ffe000;
+  box-shadow: 0 12px 30px rgba(255, 224, 0, 0.2);
+  transform: translateY(-6px);
+}
+
+/* ========== RESPONSIVE EXPERIENCE ========== */
+@media (max-width: 768px) {
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .exp-card ul {
+    font-size: 0.9rem;
+  }
+
+  .exp-date {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .exp-card ul {
+    font-size: 0.85rem;
+  }
 }
