@@ -272,3 +272,41 @@ h2 {
 .exp-image:hover {
   transform: scale(1.03);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.top-nav li {
+  margin: 0;
+}
+
+.top-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #7f9cf5; /* Nice soft blue highlight on hover */
+}
