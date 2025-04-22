@@ -255,24 +255,20 @@ h2 {
 }
 .exp-images-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .exp-image {
   width: 100%;
-  max-width: 400px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
+
 
 .exp-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
-
