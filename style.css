@@ -253,3 +253,26 @@ h2 {
     padding: 12px 20px;
   }
 }
+.exp-images-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.exp-image:hover {
+  transform: scale(1.05);
+}
+
