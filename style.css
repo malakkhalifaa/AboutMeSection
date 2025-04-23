@@ -327,3 +327,71 @@ html {
     font-size: 0.9rem; /* slightly smaller text */
   }
 }
+
+/* Home Styling */
+.home-section {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.highlight-text {
+  background: linear-gradient(to right, #a78bfa, #7dd3fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+/* About Styling */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: #f3f4f6;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
+  text-align: left;
+}
+
+/* Contact Icons */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #93c5fd;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #60a5fa;
+  transform: scale(1.2);
+}
