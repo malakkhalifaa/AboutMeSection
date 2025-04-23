@@ -459,3 +459,12 @@ html {
 .project-info p strong {
   color: #ffd700;
 }
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card a:hover {
+  color: inherit; /* keep text color consistent on hover */
+}
