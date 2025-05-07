@@ -509,57 +509,58 @@ html {
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 1rem;
-  padding: 1.5rem 2rem;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: transparent;
+  padding: 2rem;
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 224, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: none;
 }
 
 .timeline-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #ffd700;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .timeline-title span {
-  display: block;
   font-size: 0.95rem;
-  color: #ccc;
-  font-weight: 400;
+  color: #a0aec0;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .timeline-date {
   font-size: 0.9rem;
-  color: #999;
+  color: #94a3b8;
   margin-bottom: 1rem;
   font-style: italic;
 }
 
 .timeline-content ul {
-  padding-left: 1.2rem;
-  color: #ddd;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  padding-left: 1.5rem;
   list-style: disc;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
+/* Responsive Image Gallery */
 .timeline-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .timeline-image {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -570,11 +571,10 @@ html {
   transform: scale(1.03);
 }
 
-/* Icon colors by type */
+/* Icon colors */
 .timeline-element.work .timeline-icon {
   background-color: #06d6a0;
 }
-
 .timeline-element.school .timeline-icon {
   background-color: #f9c74f;
 }
@@ -591,21 +591,51 @@ html {
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+  .timeline-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .timeline-element {
+    padding-left: 2rem;
+    border-left-width: 2px;
+  }
+
+  .timeline-icon {
+    width: 1rem;
+    height: 1rem;
+    left: -0.8rem;
+    top: 0.4rem;
+  }
+
   .timeline-content {
-    padding: 1.2rem 1.4rem;
+    padding: 1rem 1.2rem;
   }
 
   .timeline-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
-  .timeline-date {
+  .timeline-title span {
     font-size: 0.85rem;
   }
 
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+
   .timeline-content ul {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
+  .timeline-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .timeline-image {
+    max-height: 220px;
+    object-fit: cover;
   }
 }
