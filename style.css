@@ -468,3 +468,144 @@ html {
 .project-card a:hover {
   color: inherit; /* keep text color consistent on hover */
 }
+
+
+/* ========== TIMELINE SECTION ========== */
+
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timeline-element {
+  position: relative;
+  padding-left: 3.5rem;
+  border-left: 3px solid #ffe000;
+  animation: slideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.timeline-element[data-aos] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.5rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #ffe000;
+  border-radius: 50%;
+  border: 3px solid #1f1e28;
+  box-shadow: 0 0 0 4px rgba(255, 224, 0, 0.2);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 224, 0, 0.25);
+}
+
+.timeline-title {
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title span {
+  display: block;
+  font-size: 0.95rem;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.timeline-content ul {
+  padding-left: 1.2rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+.timeline-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.timeline-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-image:hover {
+  transform: scale(1.03);
+}
+
+/* Icon colors by type */
+.timeline-element.work .timeline-icon {
+  background-color: #06d6a0;
+}
+
+.timeline-element.school .timeline-icon {
+  background-color: #f9c74f;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-content {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .timeline-title {
+    font-size: 1.15rem;
+  }
+
+  .timeline-date {
+    font-size: 0.85rem;
+  }
+
+  .timeline-content ul {
+    font-size: 0.9rem;
+  }
+}
