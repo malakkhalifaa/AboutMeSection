@@ -645,10 +645,24 @@ html {
     padding: 1.5rem 1rem;
   }
 
-  .timeline-element {
-    padding-left: 1rem;
-    border-left: none;
-  }
+  .timeline-content {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #00ffcc;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #d1d5db;
+  padding: 1.5rem;
+  border-radius: 8px;
+  line-height: 1.7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+}
+
 
   .timeline-icon {
     display: none; /* hides the dot for simplicity on small screens */
@@ -749,14 +763,46 @@ html {
   margin-top: 0.75rem;
 }
 
-
-
 .typing-heading {
   font-family: 'Fira Code', 'Courier New', monospace;
-  font-size: 1.1rem;
+  font-size: 0.9rem; /* ⬅ smaller text */
   color: #00ffcc;
   margin-bottom: 1.5rem;
   text-align: left;
   padding-left: 12px;
   border-left: 3px solid #00ffcc;
+  line-height: 1.4;
+  white-space: nowrap; /* ⬅ prevents wrapping */
+  overflow: hidden;
+}
+
+
+.timeline-content {
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #00ffcc;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  padding: 1.5rem;
+  border-radius: 8px;
+  line-height: 1.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .timeline-element {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  .timeline-content {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
 }
