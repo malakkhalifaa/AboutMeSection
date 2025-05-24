@@ -129,6 +129,9 @@ h2 {
   max-width: 860px;
   margin: 0 auto;
   padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.02);
 }
 
 #experience h3 {
@@ -142,9 +145,18 @@ h2 {
 /* Accordion Container */
 #experience details {
   margin-bottom: 1.8rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+#experience details[open] {
+  border-color: #00ffd5;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.07);
+  background: rgba(0, 255, 213, 0.02);
 }
 
 #experience summary {
@@ -154,6 +166,7 @@ h2 {
   cursor: pointer;
   list-style: none;
   transition: color 0.2s ease;
+  padding-bottom: 0.3rem;
 }
 
 #experience summary:hover {
@@ -185,7 +198,7 @@ h2 {
 }
 
 .experience-link {
-  color: #fef9c3; /* soft yellow */
+  color: #fef9c3;
   font-style: italic;
   font-size: 0.88rem;
   font-weight: 500;
@@ -199,7 +212,6 @@ h2 {
   text-shadow: 0 0 6px #facc15;
   transform: translateY(-1px);
 }
-
 
 /* Gallery (images) */
 #experience .travel-gallery {
@@ -220,7 +232,7 @@ h2 {
   transform: scale(1.03);
 }
 
-/* Video cards (clean pill-like) */
+/* Video cards */
 #experience .video-gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -248,6 +260,33 @@ h2 {
   transform: translateX(4px);
 }
 
+/* Badge tech icons */
+.tech-badges {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.25s ease;
+}
+
+.badge:hover {
+  background-color: rgba(148, 163, 184, 0.2);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Responsive tweaks */
 @media (min-width: 600px) {
   #experience .video-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -274,30 +313,6 @@ h2 {
   }
 }
 
-..tech-badges {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.badge {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #cbd5e1;
-  font-size: 0.7rem;
-  font-weight: 400;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  font-family: 'Inter', sans-serif;
-  transition: all 0.25s ease;
-}
-
-.badge:hover {
-  background-color: rgba(148, 163, 184, 0.2); /* subtle slate hover */
-  color: #ffffff;
-  transform: translateY(-1px);
-}
 
 
 /* ========== RESPONSIVE EXPERIENCE ========== */
@@ -408,32 +423,54 @@ h2 {
 
 /* About Styling */
 .about-section {
+  position: relative;
   padding: 4rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  color: #f3f4f6;
-  border-radius: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(17, 24, 39, 0.85));
+  border-radius: 1.5rem;
+  max-width: 920px;
+  margin: 3rem auto;
+  color: #f8fafc;
+  box-shadow: 0 0 40px rgba(0, 255, 204, 0.05);
+  overflow: hidden;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.5s ease;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #38bdf8, #a78bfa, #f472b6);
+  animation: pulseBorder 6s ease-in-out infinite;
+  filter: blur(10px);
+  opacity: 0.4;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.6;
+  }
 }
 
 .about-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #ffffff;
+  background: linear-gradient(to right, #f472b6, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #d1d5db;
-  text-align: left;
-}
-
-/* Contact Icons */
 .contact-links {
   display: flex;
   justify-content: center;
@@ -444,13 +481,19 @@ h2 {
 .contact-icon {
   font-size: 1.5rem;
   color: #93c5fd;
-  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-icon:hover {
-  color: #60a5fa;
+  color: #0f172a;
+  background-color: #7dd3fc;
   transform: scale(1.2);
 }
+
+
 
 /* PROJECTS SECTION */
 .projects-section {
