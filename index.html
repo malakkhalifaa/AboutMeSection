@@ -46,41 +46,59 @@
 <section id="home" class="home-section">
   <div id="avatar-container">
     <div id="avatar-loading">Loading...</div>
-    <div class="floating-socials">
+  </div>
+
+  <h1 class="hero-title" data-aos="zoom-in">
+    <span class="highlight-text">Click my Avatar!</span>
+  </h1>
+
+  <div class="social-resume-wrapper" data-aos="fade-up">
+    <div class="social-icons-box">
       <a href="https://github.com/malakkhalifaa" target="_blank" class="social-icon github" title="GitHub"></a>
       <a href="https://www.linkedin.com/in/malak-khalifa-b37559317/" target="_blank" class="social-icon linkedin" title="LinkedIn"></a>
       <a href="mailto:malakkhalifa10@gmail.com" class="social-icon email" title="Email"></a>
     </div>
+
+    <a href="files/Malak_Khalifa_Resume.pdf" download class="download-resume-btn">📄 Download Resume</a>
   </div>
-  <h1 class="hero-title" data-aos="zoom-in">
-    <span class="highlight-text">Click my Avatar!</span>
-  </h1>
 </section>
 
 <style>
-.floating-socials {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%);
+/* == Social Icons Box Below Avatar == */
+.social-resume-wrapper {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  max-width: 400px;
+  margin-inline: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.social-icons-box {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  z-index: 10;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
-  background-size: contain;
+  width: 42px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #1e293b;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
-  animation: floatSocial 3s ease-in-out infinite;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-icon:hover {
   transform: scale(1.2);
+  box-shadow: 0 0 10px white;
 }
 
 .github {
@@ -95,10 +113,36 @@
   background-image: url('https://img.icons8.com/ios-filled/50/ffffff/email.png');
 }
 
-@keyframes floatSocial {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -6px); }
+/* == Resume Button == */
+.download-resume-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: linear-gradient(to right, #38bdf8, #a78bfa);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.download-resume-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .download-resume-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
 </style>
 
 
