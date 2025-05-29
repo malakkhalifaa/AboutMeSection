@@ -735,7 +735,7 @@ h2 {
   color: #00ffcc;
   margin-bottom: 1.5rem;
   text-align: left;
-  padding-left: 12px;
+  padding-left: 20px;
   border-left: 3px solid #00ffcc;
   line-height: 1.4;
   white-space: nowrap; /* ⬅ prevents wrapping */
@@ -896,4 +896,4 @@ h2 {
   background: #0ea5e9;
 }
 
-/*PARTICLES*/
+
