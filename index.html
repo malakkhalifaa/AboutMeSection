@@ -52,98 +52,10 @@
     <span class="highlight-text">Click my Avatar!</span>
   </h1>
 
-  <div class="social-resume-wrapper" data-aos="fade-up">
-    <div class="social-icons-box">
-      <a href="https://github.com/malakkhalifaa" target="_blank" class="social-icon github" title="GitHub"></a>
-      <a href="https://www.linkedin.com/in/malak-khalifa-b37559317/" target="_blank" class="social-icon linkedin" title="LinkedIn"></a>
-      <a href="mailto:malakkhalifa10@gmail.com" class="social-icon email" title="Email"></a>
-    </div>
-
-    <a href="files/Malak_Khalifa_Resume.pdf" download class="download-resume-btn">📄 Download Resume</a>
-  </div>
+  
 </section>
 
-<style>
-/* == Social Icons Box Below Avatar == */
-.social-resume-wrapper {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border: 2px solid white;
-  border-radius: 1rem;
-  max-width: 400px;
-  margin-inline: auto;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
-}
 
-.social-icons-box {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1.2rem;
-}
-
-.social-icon {
-  width: 42px;
-  height: 42px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: #1e293b;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px white;
-}
-
-.github {
-  background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');
-}
-
-.linkedin {
-  background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg');
-}
-
-.email {
-  background-image: url('https://img.icons8.com/ios-filled/50/ffffff/email.png');
-}
-
-/* == Resume Button == */
-.download-resume-btn {
-  display: inline-block;
-  padding: 0.8rem 1.4rem;
-  background: linear-gradient(to right, #38bdf8, #a78bfa);
-  color: white;
-  font-weight: bold;
-  border-radius: 0.7rem;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.download-resume-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile responsive */
-@media (max-width: 500px) {
-  .social-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .download-resume-btn {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.2rem;
-  }
-}
-
-</style>
 
 
 <section id="about">
@@ -287,8 +199,8 @@
 
     <h3 class="skills-category">🌐 Frontend</h3>
     <div class="skills-grid">
-      <div><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" class="skill-icon spin" /><div>HTML5</div></div> 
-      <div><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" class="skill-icon spin" /><div>CSS3</div></div>
+      <div><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" class="skill-icon spin" /><div>HTML5</div></div>
+<div><img src="https://cdn.simpleicons.org/csswizardry/1572B6" alt="CSS3" class="skill-icon spin" /><div>CSS3</div></div> <!-- Fixed CSS3 -->
       <div><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="skill-icon spin" /><div>JavaScript</div></div>
       <div><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" class="skill-icon spin" /><div>TypeScript</div></div>
       <div><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="skill-icon spin" /><div>React</div></div>
@@ -305,16 +217,23 @@
       <div><img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL" class="skill-icon spin" /><div>GraphQL</div></div>
       <div><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt="ASP.NET Core" class="skill-icon spin" /><div>ASP.NET Core</div></div>
       <div><img src="https://cdn.simpleicons.org/devexpress/FF5C00" alt="DevExpress" class="skill-icon spin" /><div>DevExpress</div></div>
+      <div><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="skill-icon spin" /><div>FastAPI</div></div>
     </div>
 
     <h3 class="skills-category">🔬 AI & Embedded</h3>
     <div class="skills-grid">
       <div><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="skill-icon spin" /><div>Python</div></div>
       <div><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" class="skill-icon spin" /><div>PyTorch</div></div>
-      <div><img src="https://cdn.simpleicons.org/c/00599C" alt="C" class="skill-icon spin" /><div>C</div></div>
-      <div><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" class="skill-icon spin" /><div>C++</div></div>
+      <div>
+        <!-- Working Seaborn icon via Shields.io badge -->
+        <img src="https://img.shields.io/badge/-Seaborn-3776AB?logo=seaborn&logoColor=white&style=flat" alt="Seaborn" class="skill-icon" />
+        <div>Seaborn</div>
+      </div>
       <div><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="skill-icon spin" /><div>TensorFlow</div></div>
       <div><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="OpenCV" class="skill-icon spin" /><div>OpenCV</div></div>
+      <div><img src="https://cdn.simpleicons.org/huggingface/FFB000" alt="Hugging Face" class="skill-icon spin" /><div>Hugging Face</div></div>
+      <div><img src="https://cdn.simpleicons.org/c/00599C" alt="C" class="skill-icon spin" /><div>C</div></div>
+      <div><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" class="skill-icon spin" /><div>C++</div></div>
     </div>
 
     <h3 class="skills-category">🛠️ Tools</h3>
@@ -322,11 +241,12 @@
       <div><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="skill-icon spin" /><div>Git</div></div>
       <div><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="skill-icon spin" /><div>GitHub</div></div>
       <div><img src="https://cdn.simpleicons.org/latex/008080" alt="LaTeX" class="skill-icon spin" /><div>LaTeX</div></div>
+      <div><img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Plotly" class="skill-icon spin" /><div>Plotly</div></div>
+      <div><img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" class="skill-icon spin" /><div>Jupyter</div></div>
+      <div><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="scikit-learn" class="skill-icon spin" /><div>scikit-learn</div></div>
     </div>
   </div>
 </section>
-
-
 
 <section id="projects" class="projects-section" data-aos="fade-up">
   <h2 class="typing-heading">🚀 Projects</h2>
