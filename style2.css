@@ -827,4 +827,19 @@ h2 {
   background: #0ea5e9;
 }
 
+.utek-image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.utek-image {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 0.75rem;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
 
