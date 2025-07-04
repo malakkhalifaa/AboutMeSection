@@ -589,6 +589,13 @@ h2 {
     font-size: 0.9rem;
   }
 }
+.projects-advanced-carousel {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center; /* ✅ This will center the grid content */
+}
+
 
 /* ========== TIMELINE SECTION ========== */
 
