@@ -154,6 +154,7 @@ section {
   color: #f5f5f5;
   font-family: 'Inter', sans-serif;
   background-color: transparent;
+  text-align: left;
 }
 
 .about-section h2 {
@@ -168,12 +169,17 @@ section {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  line-height: 1.6;
+  max-width: 100%;
 }
 
 .about-section p {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
   margin-bottom: 1rem;
+  max-width: 100%;
+  letter-spacing: 0.01rem;
+  word-break: normal;
 }
 
 .about-section .email {
@@ -182,54 +188,182 @@ section {
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
   font-family: monospace;
+  word-break: break-all;
 }
 
 .contact-box {
   margin-top: 1.5rem;
   font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section .intro {
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+
+  .about-section p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .contact-box {
+    font-size: 0.95rem;
+  }
 }
 
 
-
-.experience-section {
+#experience {
   padding: 4rem 1.5rem;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
   color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  text-align: left;
 }
 
-.experience-section h2 {
+#experience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+#experience .experience-block {
+  margin-bottom: 2rem;
+  max-width: 720px;
+}
+
+#experience .position {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
+}
+
+#experience .date {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+#experience p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0.6rem;
+  max-width: 100%;
+  letter-spacing: 0.01rem;
+}
+
+#experience a {
+  color: inherit;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+#experience a:hover {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  #experience {
+    padding: 2.5rem 1rem;
+  }
+
+  #experience h2 {
+    font-size: 2rem;
+  }
+
+  #experience .position {
+    font-size: 1rem;
+  }
+
+  #experience p {
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  #experience .experience-block {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.skills-section {
+  padding: 4rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  text-align: left;
+}
+
+.skills-section h2 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  text-align: center;
   color: #ffffff;
 }
 
-.experience-entry {
-  margin-bottom: 2.5rem;
-}
-
-.experience-entry h3 {
-  font-size: 1.3rem;
+.skills-group-title {
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-
-.location-date {
-  font-size: 0.95rem;
-  color: #bbbbbb;
-  margin-bottom: 0.8rem;
-}
-
-.experience-entry ul {
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.experience-entry li {
-  line-height: 1.7;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  font-size: 0.98rem;
+  color: #ffffff;
+}
+
+.skills-list {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01rem;
+  word-break: break-word;
+}
+
+/* ✅ Mobile friendly */
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-group-title {
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+
+.skills-group-title {
+  display: inline-block;
+  background-color: #2c2c2c;
+  color: #e6cf00;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
 }
